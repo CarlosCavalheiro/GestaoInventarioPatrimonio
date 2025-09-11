@@ -1,0 +1,49 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Projetos\\GestaoConfPatrimonio\\InventarioAPI\\InventarioAPI\\wwwroot\\uploads\\1946c33f-952b-4026-9a93-7e9b889baa94.png",
+      "PackagePath": "staticwebassets\\uploads\\1946c33f-952b-4026-9a93-7e9b889baa94.png"
+    },
+    {
+      "Id": "C:\\Projetos\\GestaoConfPatrimonio\\InventarioAPI\\InventarioAPI\\wwwroot\\uploads\\281e3ddf-b4b9-4acc-999e-05b94641d08b.png",
+      "PackagePath": "staticwebassets\\uploads\\281e3ddf-b4b9-4acc-999e-05b94641d08b.png"
+    },
+    {
+      "Id": "C:\\Projetos\\GestaoConfPatrimonio\\InventarioAPI\\InventarioAPI\\wwwroot\\uploads\\35e2cfbc-bc73-4f00-8fad-d2348e9e9bd5.png",
+      "PackagePath": "staticwebassets\\uploads\\35e2cfbc-bc73-4f00-8fad-d2348e9e9bd5.png"
+    },
+    {
+      "Id": "C:\\Projetos\\GestaoConfPatrimonio\\InventarioAPI\\InventarioAPI\\wwwroot\\uploads\\8129c2b5-8dfa-4df7-bd3e-0ed2792fce1d.png",
+      "PackagePath": "staticwebassets\\uploads\\8129c2b5-8dfa-4df7-bd3e-0ed2792fce1d.png"
+    },
+    {
+      "Id": "C:\\Projetos\\GestaoConfPatrimonio\\InventarioAPI\\InventarioAPI\\wwwroot\\uploads\\98cd2b50-5503-4477-bba4-48d57de98180.png",
+      "PackagePath": "staticwebassets\\uploads\\98cd2b50-5503-4477-bba4-48d57de98180.png"
+    },
+    {
+      "Id": "C:\\Projetos\\GestaoConfPatrimonio\\InventarioAPI\\InventarioAPI\\wwwroot\\uploads\\d5c814fd-b350-4dca-8f53-782a1467e62c.png",
+      "PackagePath": "staticwebassets\\uploads\\d5c814fd-b350-4dca-8f53-782a1467e62c.png"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.InventarioAPI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.InventarioAPI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.InventarioAPI.props",
+      "PackagePath": "build\\InventarioAPI.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.InventarioAPI.props",
+      "PackagePath": "buildMultiTargeting\\InventarioAPI.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.InventarioAPI.props",
+      "PackagePath": "buildTransitive\\InventarioAPI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,20 @@
+{
+  "Version": 1,
+  "Hash": "hXDCIVuNO5pRR5FwbFZwBOoVF9/5UBPl0/PhnM6iokQ=",
+  "Source": "InventarioAPI",
+  "BasePath": "_content/InventarioAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "InventarioAPI\\wwwroot",
+      "Source": "InventarioAPI",
+      "ContentRoot": "C:\\Projetos\\GestaoInventario\\InventarioAPI\\wwwroot\\",
+      "BasePath": "_content/InventarioAPI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [],
+  "Endpoints": []
+}
