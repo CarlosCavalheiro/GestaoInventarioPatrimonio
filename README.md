@@ -46,3 +46,8 @@ Para rodar o projeto localmente, é necessário ter instalado:
 - **IDE** → Visual Studio Code ou outra de sua preferência.  
 
 ---
+
+## Desenvolvedor
+Carlos Alexandre Cavalheiro
+- Email: ocarlosleu@gmail.com
+- LinkedIn: https://www.linkedin.com/in/cavalheiro-ca/
