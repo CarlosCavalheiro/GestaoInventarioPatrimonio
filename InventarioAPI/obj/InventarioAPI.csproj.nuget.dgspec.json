@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projetos\\GestaoInventario\\InventarioAPI\\InventarioAPI.csproj": {}
+    "C:\\Projetos\\GestaoInventarioPatrimonio\\InventarioAPI\\InventarioAPI.csproj": {}
   },
   "projects": {
-    "C:\\Projetos\\GestaoInventario\\InventarioAPI\\InventarioAPI.csproj": {
+    "C:\\Projetos\\GestaoInventarioPatrimonio\\InventarioAPI\\InventarioAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\GestaoInventario\\InventarioAPI\\InventarioAPI.csproj",
+        "projectUniqueName": "C:\\Projetos\\GestaoInventarioPatrimonio\\InventarioAPI\\InventarioAPI.csproj",
         "projectName": "InventarioAPI",
-        "projectPath": "C:\\Projetos\\GestaoInventario\\InventarioAPI\\InventarioAPI.csproj",
+        "projectPath": "C:\\Projetos\\GestaoInventarioPatrimonio\\InventarioAPI\\InventarioAPI.csproj",
         "packagesPath": "C:\\Users\\cavalheiro_ca\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\GestaoInventario\\InventarioAPI\\obj\\",
+        "outputPath": "C:\\Projetos\\GestaoInventarioPatrimonio\\InventarioAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

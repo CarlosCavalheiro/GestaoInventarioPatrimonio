@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hXDCIVuNO5pRR5FwbFZwBOoVF9/5UBPl0/PhnM6iokQ=",
+  "Hash": "Lt4S89grRC7PvGUwkQogXh0Av4kPGqKguHPNiJyYc1U=",
   "Source": "InventarioAPI",
   "BasePath": "_content/InventarioAPI",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "InventarioAPI\\wwwroot",
       "Source": "InventarioAPI",
-      "ContentRoot": "C:\\Projetos\\GestaoInventario\\InventarioAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Projetos\\GestaoInventarioPatrimonio\\InventarioAPI\\wwwroot\\",
       "BasePath": "_content/InventarioAPI",
       "Pattern": "**"
     }

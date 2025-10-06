@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AHBPLUnmHNI=",
+  "dgSpecHash": "HvGQN8ML59M=",
   "success": true,
-  "projectFilePath": "C:\\Projetos\\GestaoInventario\\InventarioAPI\\InventarioAPI.csproj",
+  "projectFilePath": "C:\\Projetos\\GestaoInventarioPatrimonio\\InventarioAPI\\InventarioAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cavalheiro_ca\\.nuget\\packages\\azure.core\\1.44.1\\azure.core.1.44.1.nupkg.sha512",
     "C:\\Users\\cavalheiro_ca\\.nuget\\packages\\azure.storage.blobs\\12.25.0\\azure.storage.blobs.12.25.0.nupkg.sha512",
