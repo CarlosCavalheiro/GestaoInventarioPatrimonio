@@ -1,7 +1,7 @@
-using InventarioApi.Models;
+using InventarioAPI.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace InventarioApi.Data
+namespace InventarioAPI.Data
 {
     public class InventarioDbContext : DbContext
     {

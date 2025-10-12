@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace InventarioApi.DTOs
+namespace InventarioAPI.DTOs
 {
     public class UserCreateDto
     {

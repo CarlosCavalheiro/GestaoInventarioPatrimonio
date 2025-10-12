@@ -1,4 +1,4 @@
-namespace InventarioApi.DTOs
+namespace InventarioAPI.DTOs
 {
     public class UserListDto
     {

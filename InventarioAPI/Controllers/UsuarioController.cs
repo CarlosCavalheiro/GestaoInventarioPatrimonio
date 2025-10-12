@@ -1,14 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using InventarioApi.Data;
-using InventarioApi.Models;
+using InventarioAPI.Data;
+using InventarioAPI.Models;
 using Microsoft.EntityFrameworkCore;
-using BCrypt.Net;
-using Microsoft.AspNetCore.Authorization;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using InventarioApi.DTOs;
-using System.Linq;
-using System.Security.Claims;
+using InventarioAPI.DTOs;
 
 namespace InventarioApi.Controllers
 {
