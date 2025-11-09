@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projetos\\GestaoInventarioPatrimonio\\InventarioAPI\\InventarioAPI.csproj": {}
+    "C:\\ArquivosCarlos\\Projetos\\GestaoInventarioPatrimonio\\InventarioAPI\\InventarioAPI.csproj": {}
   },
   "projects": {
-    "C:\\Projetos\\GestaoInventarioPatrimonio\\InventarioAPI\\InventarioAPI.csproj": {
+    "C:\\ArquivosCarlos\\Projetos\\GestaoInventarioPatrimonio\\InventarioAPI\\InventarioAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\GestaoInventarioPatrimonio\\InventarioAPI\\InventarioAPI.csproj",
+        "projectUniqueName": "C:\\ArquivosCarlos\\Projetos\\GestaoInventarioPatrimonio\\InventarioAPI\\InventarioAPI.csproj",
         "projectName": "InventarioAPI",
-        "projectPath": "C:\\Projetos\\GestaoInventarioPatrimonio\\InventarioAPI\\InventarioAPI.csproj",
-        "packagesPath": "C:\\Users\\cavalheiro_ca\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\GestaoInventarioPatrimonio\\InventarioAPI\\obj\\",
+        "projectPath": "C:\\ArquivosCarlos\\Projetos\\GestaoInventarioPatrimonio\\InventarioAPI\\InventarioAPI.csproj",
+        "packagesPath": "C:\\Users\\Carlos\\.nuget\\packages\\",
+        "outputPath": "C:\\ArquivosCarlos\\Projetos\\GestaoInventarioPatrimonio\\InventarioAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\cavalheiro_ca\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Carlos\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -45,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -113,7 +112,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
