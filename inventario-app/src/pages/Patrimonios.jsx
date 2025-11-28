@@ -20,12 +20,11 @@ function Patrimonios() {
 
   const fetchData = async () => {
     const token = localStorage.getItem('token');
-
-    // if (!token) {
-    //   setError('Token não encontrado. Faça login novamente.');
-    //   setIsLoading(false);
-    //   return;
-    // }
+    if (!token) {
+      setError('Token não encontrado. Faça login novamente.');
+      setIsLoading(false);
+      return;
+    }
 
     setIsLoading(true);
     setError(null);

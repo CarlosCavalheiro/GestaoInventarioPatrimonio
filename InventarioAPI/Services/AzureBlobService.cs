@@ -1,7 +1,7 @@
 using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Models;
 
-namespace InventarioApi.Services
+namespace InventarioAPI.Services
 {
     public class AzureBlobService
     {

@@ -7,10 +7,12 @@ using System.Linq;
 using InventarioApi.DTOs;
 using System.Security.Claims;
 using InventarioAPI.Data;
+using InventarioAPI.DTOs;
 using InventarioAPI.Models;
 
 namespace InventarioApi.Controllers
-{    
+{
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class PatrimoniosController : ControllerBase
@@ -59,7 +61,8 @@ namespace InventarioApi.Controllers
             return Ok(patrimonios);
         }
 
-        [HttpGet("meus-patrimonios")]        
+        [HttpGet("meus-patrimonios")]
+        [Authorize]
         public async Task<ActionResult<IEnumerable<PatrimonioListDto>>> GetMeusPatrimonios(
             [FromQuery] int localId)
         {
@@ -90,7 +93,8 @@ namespace InventarioApi.Controllers
             return patrimonio;
         }
 
-        [HttpPost]        
+        [HttpPost]
+        [Authorize(Roles = "administrador")]
         public async Task<ActionResult<Patrimonio>> CreatePatrimonio(PatrimonioDto patrimonioDto)
         {
             var patrimonio = new Patrimonio
@@ -104,7 +108,8 @@ namespace InventarioApi.Controllers
             return CreatedAtAction(nameof(GetPatrimonios), new { id = patrimonio.Id }, patrimonio);
         }
 
-        [HttpPut("{id}")]        
+        [HttpPut("{id}")]
+        [Authorize(Roles = "administrador")]
         public async Task<IActionResult> UpdatePatrimonio(int id, PatrimonioDto patrimonioDto)
         {
             if (id != patrimonioDto.Id)
@@ -143,7 +148,8 @@ namespace InventarioApi.Controllers
             return NoContent();
         }
 
-        [HttpDelete("{id}")]        
+        [HttpDelete("{id}")]
+        [Authorize(Roles = "administrador")]
         public async Task<IActionResult> DeletePatrimonio(int id)
         {
             var patrimonio = await _context.Patrimonios.FindAsync(id);

@@ -15,9 +15,19 @@ function Users() {
     fetchUsers();
   }, []);
 
-  const fetchUsers = async () => {  
+  const fetchUsers = async () => {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      setError('Token não encontrado. Faça login novamente.');
+      setIsLoading(false);
+      return;
+    }
+
     try {
-      const usersResponse = await fetch(`${API_URL}/Usuarios`, { method: 'GET'        
+      const usersResponse = await fetch(`${API_URL}/Usuarios`, {
+        headers: {
+          'Authorization': `Bearer ${token}`,
+        },
       });
       const usersData = await usersResponse.json();
       setUsers(usersData);
@@ -47,7 +57,8 @@ function Users() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();    
+    e.preventDefault();
+    const token = localStorage.getItem('token');
     const method = isEditing ? 'PUT' : 'POST';
     const url = `${API_URL}/Usuarios/${isEditing ? formData.id : ''}`;
 
@@ -55,7 +66,8 @@ function Users() {
       const response = await fetch(url, {
         method,
         headers: {
-          'Content-Type': 'application/json',          
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`,
         },
         body: JSON.stringify(formData),
       });
@@ -65,26 +77,28 @@ function Users() {
       }
 
       closeModal();
-      fetchUsers();
+      fetchUsers(); // Atualiza a lista
     } catch (err) {
       setError(err.message);
     }
   };
 
   const handleDelete = async (id) => {
-    
+    const token = localStorage.getItem('token');
     if (window.confirm('Tem certeza que deseja excluir este usuário?')) {
       try {
         const response = await fetch(`${API_URL}/Usuarios/${id}`, {
           method: 'DELETE',
-          headers: { 'Content-Type': 'application/json' },
+          headers: {
+            'Authorization': `Bearer ${token}`,
+          },
         });
 
         if (!response.ok) {
           throw new Error('Falha ao excluir o usuário.');
         }
 
-        fetchUsers();
+        fetchUsers(); // Atualiza a lista
       } catch (err) {
         setError(err.message);
       }

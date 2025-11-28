@@ -18,6 +18,12 @@ function Locais() {
   }, [searchNomeLocal, searchResponsavelNome]);
 
   const fetchData = async () => {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      setError('Token não encontrado. Faça login novamente.');
+      setIsLoading(false);
+      return;
+    }
 
     try {
       const queryParams = new URLSearchParams({
@@ -26,13 +32,13 @@ function Locais() {
       }).toString();
 
       const locaisResponse = await fetch(`${API_URL}/Locais?${queryParams}`, {
-        headers: {},
+        headers: { 'Authorization': `Bearer ${token}` },
       });
       const locaisData = await locaisResponse.json();
       setLocais(locaisData);
 
       const usuariosResponse = await fetch(`${API_URL}/Usuarios`, {
-        headers: {},
+        headers: { 'Authorization': `Bearer ${token}` },
       });
       const usuariosData = await usuariosResponse.json();
       setUsuarios(usuariosData);

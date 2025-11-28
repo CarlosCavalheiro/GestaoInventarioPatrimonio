@@ -1,12 +1,18 @@
 using Microsoft.AspNetCore.Mvc;
-using InventarioAPI.Data;
-using InventarioAPI.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using System.Linq;
+using InventarioApi.DTOs;
+using System.Security.Claims;
+using InventarioAPI.Data;
 using InventarioAPI.DTOs;
+using InventarioAPI.Models;
 
 namespace InventarioApi.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class LocaisController : ControllerBase
@@ -18,7 +24,8 @@ namespace InventarioApi.Controllers
             _context = context;
         }
 
-        [HttpGet]        
+        [HttpGet]
+        [Authorize(Roles = "administrador")]
         public async Task<ActionResult<IEnumerable<LocalListDto>>> GetLocais(
             [FromQuery] string nomeLocal = null,
             [FromQuery] string responsavelNome = null)
@@ -48,7 +55,8 @@ namespace InventarioApi.Controllers
             return Ok(locais);
         }
 
-        [HttpGet("meus-locais")]        
+        [HttpGet("meus-locais")]
+        [Authorize(Roles = "funcionario")]
         public async Task<ActionResult<IEnumerable<LocalListDto>>> GetMeusLocais()
         {
             var userIdString = User.FindFirst("userId")?.Value;
@@ -83,7 +91,8 @@ namespace InventarioApi.Controllers
             return Ok(meusLocais);
         }
 
-        [HttpGet("{id}")]        
+        [HttpGet("{id}")]
+        [Authorize(Roles = "administrador")] // Apenas admins podem buscar por ID
         public async Task<ActionResult<Local>> GetLocal(int id)
         {
             var local = await _context.Locais.FindAsync(id);
@@ -94,7 +103,8 @@ namespace InventarioApi.Controllers
             return local;
         }
 
-        [HttpPost]        
+        [HttpPost]
+        [Authorize(Roles = "administrador")]
         public async Task<ActionResult<Local>> CreateLocal(LocalDto localDto)
         {
             var local = new Local
@@ -109,6 +119,7 @@ namespace InventarioApi.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize(Roles = "administrador")]
         public async Task<IActionResult> UpdateLocal(int id, LocalDto localDto)
         {
             if (id != localDto.Id)
@@ -148,6 +159,7 @@ namespace InventarioApi.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "administrador")]
         public async Task<IActionResult> DeleteLocal(int id)
         {
             var local = await _context.Locais.FindAsync(id);

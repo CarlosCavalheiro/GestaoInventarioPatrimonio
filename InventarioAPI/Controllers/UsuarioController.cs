@@ -1,11 +1,19 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using BCrypt.Net;
+using Microsoft.AspNetCore.Authorization;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using InventarioApi.DTOs;
+using System.Linq;
+using System.Security.Claims;
 using InventarioAPI.Data;
 using InventarioAPI.Models;
-using Microsoft.EntityFrameworkCore;
 using InventarioAPI.DTOs;
 
 namespace InventarioApi.Controllers
 {
+    [Authorize] // Autentica qualquer usuário
     [Route("api/[controller]")]
     [ApiController]
     public class UsuariosController : ControllerBase
@@ -17,7 +25,34 @@ namespace InventarioApi.Controllers
             _context = context;
         }
 
+        [HttpGet("me")]
+        public async Task<ActionResult<Usuario>> GetCurrentUser()
+        {
+            // Obtém o ID do usuário a partir do token JWT
+            var userIdString = User.FindFirst("userId")?.Value;
+            if (userIdString == null)
+            {
+                return Unauthorized();
+            }
+
+            if (!int.TryParse(userIdString, out int userId))
+            {
+                return BadRequest();
+            }
+
+            var usuario = await _context.Usuarios
+                .FirstOrDefaultAsync(u => u.Id == userId);
+
+            if (usuario == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(usuario);
+        }
+
         [HttpGet]
+        [Authorize(Roles = "administrador")] 
         public async Task<ActionResult<IEnumerable<UserListDto>>> GetUsers()
         {
             var users = await _context.Usuarios
@@ -34,6 +69,7 @@ namespace InventarioApi.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "administrador")]
         public async Task<ActionResult<Usuario>> CreateUser(UserCreateDto userDto)
         {
             var usuario = new Usuario
@@ -50,6 +86,7 @@ namespace InventarioApi.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize(Roles = "administrador")]
         public async Task<IActionResult> UpdateUser(int id, UserUpdateDto userDto)
         {
             if (id != userDto.Id)
@@ -94,6 +131,7 @@ namespace InventarioApi.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "administrador")]
         public async Task<IActionResult> DeleteUser(int id)
         {
             var usuario = await _context.Usuarios.FindAsync(id);
